@@ -32,7 +32,7 @@ class end : AppCompatActivity() {
             var email = getIntent().getStringExtra("email")
 
 
-
+            //เซ็ตข้อมูลก่อนส่ง
             mDatabase = FirebaseDatabase.getInstance().reference
             listViewItems = findViewById<View>(R.id.listshow) as ListView
             toDoItemList = mutableListOf<ToDo>()
@@ -40,6 +40,7 @@ class end : AppCompatActivity() {
             listViewItems!!.setAdapter(adapter)
             mDatabase.orderByKey().addListenerForSingleValueEvent(itemListener)
 
+            //รายการที่คลิกเข้าไปดู
             listshow.setOnItemClickListener{ parent, view, position, id ->
                 val intent = Intent(this,deteaillist::class.java)
                 val selectedItem = parent.getItemAtPosition(position) as ToDo
@@ -47,6 +48,8 @@ class end : AppCompatActivity() {
                 intent.putExtra("nameevent3",selectedItem.nameevent3.toString())
                 intent.putExtra("nameevent2",selectedItem.nameevent2.toString())
                 intent.putExtra("nameevent4",selectedItem.nameevent4.toString())
+                intent.putExtra("email",email.toString())
+                startActivity(intent)
                 startActivity(intent)
 
 
@@ -91,6 +94,10 @@ class end : AppCompatActivity() {
 //                        if (map.get("email") == email){
                             val todoItem = ToDo.create()
                             todoItem.nameevent = map.get("nameevent") as String
+                        todoItem.nameevent2 = map.get("nameevent2") as String
+                        todoItem.nameevent3 = map.get("nameevent3") as String
+                        todoItem.nameevent4 = map.get("nameevent4") as String
+
 
 
                             toDoItemList!!.add(todoItem);

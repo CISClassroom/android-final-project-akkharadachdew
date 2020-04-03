@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_deteaillist.*
+import kotlinx.android.synthetic.main.activity_home.*
 
 class deteaillist : AppCompatActivity() {
 
@@ -16,15 +17,18 @@ class deteaillist : AppCompatActivity() {
         setContentView(R.layout.activity_deteaillist)
         mDatabase = FirebaseDatabase.getInstance().reference
 
-        var nameevent = getIntent().getStringExtra("nameevent")
+        var email = getIntent().getStringExtra("email") //รับemail
+        textView8.text = email.toString()
+
+        var nameevent = getIntent().getStringExtra("nameevent")  //รับข้อมูลจากที่ส่งมา
         var nameevent2 = getIntent().getStringExtra("nameevent2")
         var nameevent3 = getIntent().getStringExtra("nameevent3")
         var nameevent4 = getIntent().getStringExtra("nameevent4")
 
-        nameeventshow.text = nameevent
-        dateeventshow.text = nameevent2
-        timebookingshow.text = nameevent3
-        whoarebooking.text = nameevent4
+        show1.text = nameevent
+        show2.text = nameevent2  //แสดง
+        show3.text = nameevent3
+        show4.text = nameevent4
 
 
 //

@@ -17,17 +17,18 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/txtuser2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:gravity="right"
-            android:textSize="24sp" />
-
-        <TextView
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="TextView" />
+
 
         <TextView
             android:id="@+id/textView30"
@@ -37,10 +38,12 @@
         <TextView
             android:id="@+id/textView14"
             android:layout_width="match_parent"
+           android:textColor="#000000"
             android:layout_height="wrap_content"
-            android:text="รายละเอียดการฝึกงาน"
             android:gravity="center"
-            android:textSize="24sp" />
+            android:text="รายละเอียดการฝึกงาน"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView31"
@@ -67,10 +70,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="รายละเอีด" />
+                android:textColor="#000000"
+                android:text="รายละเอีด"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/nameeventshow"
+                android:id="@+id/show1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -98,10 +103,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="วันที่" />
+                android:textColor="#000000"
+                android:text="วันที่"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/dateeventshow"
+                android:id="@+id/show2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -128,10 +135,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="ช่วงเวลา" />
+                android:textColor="#000000"
+                android:text="เดือน"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/timebookingshow"
+                android:id="@+id/show3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -158,10 +167,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="ผู้จอง" />
+                android:textColor="#000000"
+                android:text="เวลา"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/whoarebooking"
+                android:id="@+id/show4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -199,7 +210,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ลบ"
+                android:textColor="#000000"
+                android:text="ปุ่มลบที่ลบไม่ได้"
                 android:textSize="20dp" />
 
             <TextView

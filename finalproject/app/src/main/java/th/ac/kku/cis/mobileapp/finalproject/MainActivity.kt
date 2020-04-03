@@ -21,13 +21,15 @@ class MainActivity : AppCompatActivity() {
         this.login1.setOnClickListener{
             val email = mUsernameTextview.text.toString()
             val password = mPasswordTextview.text.toString()
+
             mDatabase.child("user").addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
+                   //ดึงข้อมูล
                     val user = dataSnapshot.children.iterator()
                     if(user.hasNext()){
                         while (user.hasNext()){
                             val user = user.next().getValue() as HashMap<String, Any>
-
+//เช็คดาต้าเบส
                             if (user.get("email")as String == email && user.get("password")as String == password ){
                                 val intent = Intent(this@MainActivity,sadasda::class.java)
                                 intent.putExtra("email",email.toString())

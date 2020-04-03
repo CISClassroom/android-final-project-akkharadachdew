@@ -39,15 +39,15 @@ class home : AppCompatActivity() {
 
         button2.setOnClickListener{
             savedata()
-            //startActivity(Intent(this@home,sadasda::class.java))
+            startActivity(Intent(this@home,sadasda::class.java))
         }
     }
-    private fun savedata() {
+    private fun savedata() {//สร้างตัแปรรับค่า
         var nameevent = editText4.text.toString().trim()
         var nameevent2 = editText6.text.toString().trim()
         var nameevent3 = spinner.selectedItem.toString().trim()
         var nameevent4 = editText7.text.toString().trim()
-
+//บันทึกลงดาต้า
         var todoItem = ToDo.create()
         val newItem = mDatabase.child("dew").push()
         todoItem.id = newItem.key
